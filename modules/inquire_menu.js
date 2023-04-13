@@ -1,31 +1,31 @@
 import inquirer from "inquirer";
-import colors from 'colors'
+import colors from "colors";
 
 const mostrarMenu = async () => {
   const questions = [
     {
       type: "list",
-      name: "accion",
+      name: "opcion",
       message: "Que desea hacer ",
       choices: [
         {
           value: "1",
-          name: `${`1.`.green} Calcular el error`,
+          name: `${`1.`.green} Evaluar un polinomio `,
         },
         {
           value: "2",
-          name: ` ${`2.`.green}Calcular el intervalo de raices`,
+          name: ` ${`2.`.green}Proximamente...`,
         },
         {
           value: "3",
-          name: ` ${`3.`.green}Separar Raices `,
+          name: ` ${`3.`.green}Proximamente...`,
         },
       ],
     },
   ];
 
-   return await inquirer.prompt(questions);
-
+  const { opcion } = await inquirer.prompt(questions);
+  return opcion;
 };
 
 export default mostrarMenu;
