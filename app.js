@@ -1,12 +1,13 @@
 import colors from "colors";
 
-import mostrarMenu from "./modules/inquire_menu.js ";
+import {mostrarMenu,menuBiseccion} from "./modules/inquire_menu.js ";
 import pausa from "./modules/pausa.js";
 import { funcion } from "./algoritmos/funcion.js";
 import { crearFuncion, evaluarFuncion } from "./algoritmos/evaluar_polin.js";
+import { biseccion } from "./algoritmos/biseccion.js";
 
 const Main = async () => {
-  console.clear();
+  
   let opt = "";
 
   do {
@@ -19,6 +20,12 @@ const Main = async () => {
       const { f, x } = await funcion();
       console.log("La funcion es: ", `${f}`.gray);
       console.log("La evalucacion es: ", evaluarFuncion(f, Number(x)));
+    }
+    else if(opt=2){
+      const {p,a,b,error}= await menuBiseccion();
+      const f=  crearFuncion(p);
+      console.log(f);
+      biseccion(f,1,2,0.1)
     }
 
 

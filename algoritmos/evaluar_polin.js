@@ -5,7 +5,7 @@ export const evaluarFuncion = (p, px) => {
    return f.evaluate({x:px});
 };
 
-export const crearFuncion = (p, px) => {
-    return  f = math.parse(p).compile();
+export const crearFuncion = (p) => {
+    return  math.parse(p).compile();
   };
   

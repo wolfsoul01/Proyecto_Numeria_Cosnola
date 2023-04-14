@@ -1,7 +1,8 @@
 import inquirer from "inquirer";
 import colors from "colors";
 
-const mostrarMenu = async () => {
+export const mostrarMenu = async () => {
+  console.clear();
   const questions = [
     {
       type: "list",
@@ -14,7 +15,7 @@ const mostrarMenu = async () => {
         },
         {
           value: "2",
-          name: ` ${`2.`.green}Proximamente...`,
+          name: ` ${`2.`.green}Biseccion...`,
         },
         {
           value: "3",
@@ -28,4 +29,53 @@ const mostrarMenu = async () => {
   return opcion;
 };
 
-export default mostrarMenu;
+export const menuBiseccion = async() => {
+  const questions = [
+    {
+      type: "input",
+      name: "p",
+      message: "Ingrese el polinomio ",
+      validate: (input) => {
+        if (input.lentgh === 0) {
+          return "Ingrese un valor ";
+        }
+        return true;
+      },
+    },
+    {
+      type: "input",
+      name: "a",
+      message: "El primer intervalo",
+      validate: (input) => {
+        if (input.lentgh === 0) {
+          return "Ingrese un valor ";
+        }
+        return true;
+      },
+    },
+    {
+      type: "input",
+      name: "b",
+      message: "El 2do intervalo ",
+      validate: (input) => {
+        if (input.lentgh === 0) {
+          return "Ingrese un valor ";
+        }
+        return true;
+      },
+    },
+    {
+      type: "input",
+      name: "error",
+      message: "Ingrese el error ",
+      validate: (input) => {
+        if (input.lentgh === 0) {
+          return "Ingrese un valor ";
+        }
+        return true;
+      },
+    },
+  ];
+
+  return  await inquirer.prompt(questions);
+};
