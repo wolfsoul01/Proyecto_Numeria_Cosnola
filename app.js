@@ -5,11 +5,13 @@ import pausa from "./modules/pausa.js";
 import { funcion } from "./algoritmos/funcion.js";
 import { crearFuncion, evaluarFuncion } from "./algoritmos/evaluar_polin.js";
 import { biseccion } from "./algoritmos/biseccion.js";
+import { number } from "mathjs";
+import { mostrarLogo } from "./modules/ascii.js";
 
 const Main = async () => {
   
   let opt = "";
-
+  
   do {
     opt = await mostrarMenu();
     //console.log(opt);
@@ -24,8 +26,13 @@ const Main = async () => {
     else if(opt=2){
       const {p,a,b,error}= await menuBiseccion();
       const f=  crearFuncion(p);
+      console.log(p);
+      console.log(a);
+      console.log(b);
+      console.log(error);
       console.log(f);
-      biseccion(f,1,2,0.1)
+
+      await biseccion(f,Number(a),Number(b),error)
     }
 
 
@@ -33,4 +40,6 @@ const Main = async () => {
   } while (opt !== "3");
 };
 
-Main();
+mostrarLogo();
+
+setTimeout(Main,3000)

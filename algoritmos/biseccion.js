@@ -12,7 +12,7 @@ const pi = 3.1415926535897932384626433832795;
 //  la función
 //const f = (x) =>  2 *math.pow(x,4)- 9 *math.pow(x,3)+19*x-11;
 
-export const biseccion = (f, a, b, error) => {
+export const biseccion =async (f, a, b, error) => {
   // intervalo inicial y la precisión deseada
 
   // variables de control

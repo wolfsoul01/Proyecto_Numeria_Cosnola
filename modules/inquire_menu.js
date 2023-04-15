@@ -1,5 +1,7 @@
 import inquirer from "inquirer";
 import colors from "colors";
+import { mostrarLogo } from "./ascii.js";
+import { log } from "mathjs";
 
 export const mostrarMenu = async () => {
   console.clear();
@@ -15,7 +17,15 @@ export const mostrarMenu = async () => {
         },
         {
           value: "2",
-          name: ` ${`2.`.green}Biseccion...`,
+          name: ` ${`2.`.green}Biseccion`,
+        },
+        {
+          value: "3",
+          name: ` ${`3.`.green}Proximamente...`,
+        },
+        {
+          value: "3",
+          name: ` ${`3.`.green}Proximamente...`,
         },
         {
           value: "3",
@@ -37,7 +47,7 @@ export const menuBiseccion = async() => {
       message: "Ingrese el polinomio ",
       validate: (input) => {
         if (input.lentgh === 0) {
-          return "Ingrese un valor ";
+          return ">>>".red, 'Por favor este campo no puede estar vacio' ;
         }
         return true;
       },
@@ -48,7 +58,7 @@ export const menuBiseccion = async() => {
       message: "El primer intervalo",
       validate: (input) => {
         if (input.lentgh === 0) {
-          return "Ingrese un valor ";
+          return ">>>".red, 'Por favor este campo no puede estar vacio'  ;
         }
         return true;
       },
@@ -59,7 +69,7 @@ export const menuBiseccion = async() => {
       message: "El 2do intervalo ",
       validate: (input) => {
         if (input.lentgh === 0) {
-          return "Ingrese un valor ";
+          return ">>>".red, 'Por favor este campo no puede estar vacio'  ;
         }
         return true;
       },
@@ -70,7 +80,7 @@ export const menuBiseccion = async() => {
       message: "Ingrese el error ",
       validate: (input) => {
         if (input.lentgh === 0) {
-          return "Ingrese un valor ";
+          return ">>>".red, 'Por favor este campo no puede estar vacio'  ;
         }
         return true;
       },
