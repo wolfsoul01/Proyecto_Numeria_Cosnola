@@ -42,4 +42,4 @@ const Main = async () => {
 
 mostrarLogo();
 
-setTimeout(Main,3000)
+setTimeout(Main,5000)
