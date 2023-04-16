@@ -54,7 +54,7 @@ export const biseccion =async (f, a, b, error) => {
       fb.toString().green,
       c.toString().green,
       fc.toString().green,
-      err.toString(),
+      err.toString().red,
     ]);
 
     // Si la función evaluada en el punto medio es cero, hemos encontrado la raíz
@@ -85,6 +85,7 @@ export const biseccion =async (f, a, b, error) => {
     b.toString().green,
     fb.toString().green,
     `La raíz es ${c}`.cyan,
+    
   ]);
 
   // Mostrar la tabla en la consola
