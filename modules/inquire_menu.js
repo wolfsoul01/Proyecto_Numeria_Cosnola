@@ -22,12 +22,12 @@ export const mostrarMenu = async () => {
           name: ` ${`3.`.green}Proximamente...`,
         },
         {
-          value: "3",
-          name: ` ${`3.`.green}Proximamente...`,
+          value: "4",
+          name: ` ${`4.`.green}Proximamente...`,
         },
         {
-          value: "3",
-          name: ` ${`3.`.green}Proximamente...`,
+          value: "0",
+          name: ` ${`0.`.green}Proximamente...`,
         },
       ],
     },

@@ -1,6 +1,7 @@
 //const math = require("mathjs");
 //const colors = require("colors");
 //const Table = require("cli-table");
+
 import * as math from "mathjs";
 import colors from "colors";
 import Table from "cli-table";
