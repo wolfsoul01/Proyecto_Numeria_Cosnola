@@ -1,11 +1,8 @@
 import colors from "colors";
 
-import { mostrarMenu, menuBiseccion } from "./modules/inquire_menu.js ";
-import pausa from "./modules/pausa.js";
-import { funcion } from "./algoritmos/funcion.js";
+import { mostrarMenu, menuBiseccion, pausa ,funcion} from "./modules/inquire_menu.js ";
 import { crearFuncion, evaluarFuncion } from "./algoritmos/evaluar_polin.js";
 import { biseccion } from "./algoritmos/biseccion.js";
-import { number } from "mathjs";
 import { mostrarLogo } from "./modules/ascii.js";
 
 const Main = async () => {
@@ -13,7 +10,6 @@ const Main = async () => {
 
   do {
     opt = await mostrarMenu();
-    //console.log(opt);
     if (opt === "1") {
       console.log(
         `Por favor ingrese la funcion usando estos caracteres para el correcto funcionamiento del programa: \nsuma: +\nresta: - \ndivision: / \nmultiplicacion: * \nelevacion a potencia: ^ \nUn ejemplo seria x^3*2x^2+7x+10\n`
@@ -39,4 +35,4 @@ const Main = async () => {
 
 mostrarLogo();
 
-setTimeout(Main, 5000);
+setTimeout(Main, 3000);
